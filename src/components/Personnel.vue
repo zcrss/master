@@ -12,12 +12,12 @@
           <th>操作</th>
         </tr>
         </thead>
-        <tbody class="mheader">
-        <th>xx</th>
-        <th>xx</th>
-        <th>xx</th>
-        <th>xx</th>
-        <th>xx</th>
+        <tbody class="mheader" v-for="item in personList" :key="item.id">
+        <th>{{ item.id }}</th>
+        <th>{{ item.name }}</th>
+        <th>{{ item.sex }}</th>
+        <th>{{ item.age }}</th>
+        <th>{{ item.occupation }}</th>
         <th>
           <button class="btn">修改</button>
           <button class="btn">删除</button>
@@ -31,7 +31,20 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Personnel"
+  name: "Personnel",
+  data() {
+    return{
+      personList:[
+        {id:'0001',name:'张三',sex:'男',age:20,occupation:'前端开发'},
+        {id:'0001',name:'张三',sex:'男',age:20,occupation:'前端开发'},
+        {id:'0001',name:'张三',sex:'男',age:20,occupation:'前端开发'},
+        {id:'0001',name:'张三',sex:'男',age:20,occupation:'前端开发'},
+        {id:'0001',name:'张三',sex:'男',age:20,occupation:'前端开发'},
+        {id:'0001',name:'张三',sex:'男',age:20,occupation:'前端开发'},
+        {id:'0001',name:'张三',sex:'男',age:20,occupation:'前端开发'}
+      ]
+    }
+  }
 }
 </script>
 
