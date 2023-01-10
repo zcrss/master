@@ -3,16 +3,16 @@
     <div id="navf">
       <ul>
         <li>
-          <a href="javaScript:;">首页</a>
+          <router-link active-class="active" to="/">首页</router-link>
         </li>
         <li>
-          <a href="javaScript:;">员工信息</a>
+          <router-link active-class="active" to="/a1">员工信息</router-link>
         </li>
         <li>
           <a href="javaScript:;">信息管理</a>
         </li>
         <li>
-          <a href="javaScript:;">部门管理</a>
+          <router-link active-class="active" to="/a2">部门管理</router-link>
         </li>
         <li>
           <a href="javaScript:;">请假审批</a>
@@ -48,7 +48,7 @@ export default {
   width: 10%;
   height: 100vh;
   background-color: #2B3F56;
-  /*float: left;*/
+  float: left;
 }
 #nav ul li {
   list-style: none;
